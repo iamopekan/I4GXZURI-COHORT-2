@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login and registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()" onClick="myFunction()" >Login</button>
+                <button type="button" class="toggle-btn" onclick="register()" >Register</button>
+            </div>
+            <div class="social-icons">
+                
+                <img src="images/fb.png" >
+                <img src="images/tw.png" >
+                <img src="images/ig.png" >
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Email" id="email" >
+                <input type="password" class="input-field" placeholder="Password" id="password">
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn" onClick="auth()">Login</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="First Name" required>
+                <input type="text" class="input-field" placeholder="Last Name" required>
+                <input type="number" class="input-field" placeholder="Phone Number" required>
+                <input type="email" class="input-field" placeholder="Email" required> <br><br>
+                <label id="gender" for="gender">Gender</label>
+                <select id="gender" name="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <br><br>
+                <label id="dob" for="dob">dob</label>
+                <input id="date_of_birth" type="date"><br><br>
+                <label id="dob" for="dob">Favorite Colour</label>
+                <input type="color" value="#999" id="colorPicker"><br><br><br>
+
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div> 
+    </div>
+        <script> 
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+        function auth(){
+          var Email = document.getElementById("email").value;
+          var Password = document.getElementById("password").value;
+
+          if (email === "" && password === "") {
+            alert("You have successfully logged in.");
+            location.reload();
+          } else {
+            loginErrorMsg.style.opacity = 1;
+          }
+        }
+
+        </script>
+</body>
+</html>
