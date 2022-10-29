@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards{    
+    width: 800px;  
+    display: flex;  
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carditem{
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.carditem h2{
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+
+}
+
+.carditem p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', san-serif;
+    font-size: 15px;
+    flex-grow: 1;
+}
+
+.carditem button{
+    background-color: hsl(0, 0%, 95%);
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 15px;    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carditem button:hover{
+    background-color: transparent;
+    border: 0.5px solid hsl(0, 0%, 95%);
+    padding: 8px 11px;
+    color: hsl(0, 0%, 95%);
+}
+
+.first{
+    background-color: hsl(31, 77%, 52%);
+}
+
+.first button{
+    color: hsl(31, 77%, 52%);
+}
+
+.second{
+    background-color: hsl(184, 100%, 22%);
+}
+
+.second button{
+    color: hsl(184, 100%, 22%);
+}
+
+.third{
+    background-color: hsl(179, 100%, 13%);
+}
+
+.third button{
+    color: hsl(179, 100%, 13%);
+}
+
+.link-button { 
+    position: absolute;
+    top: 5%;
+    background: #7e2103 none repeat scroll 0 0; 
+    border: 1px #37b748; 
+    color: #ffffff; 
+    outline: medium none; 
+    border-radius: 20px;
+    padding: 15px; 
+    text-decoration: none; 
+    margin-top: 700px;
+}
+
+   .link-button:hover { 
+       Background-color: hsl(179, 100%, 13%);; 
+       Color: #ffffff;
+   }
+
+@media screen and (max-width: 550px) {
+    body{
+        padding: 60px 30px;
+    } 
+    .cards{
+        flex-direction: column;
+    }
+}
+
